@@ -13,24 +13,24 @@ Then after the `Publisher` is subscriber the `log` method prints something like
 ```
 ⬆️ POST https://mysuper.api
 Headers: [
-	Authorization : Bearer XYZ
+    Authorization : Bearer XYZ
 ]
 Body: {
-	"key": "value"
+    "key": "value"
 }
 ```
 
 and when the response comes
 
 ```
-⬇️ GET https://api.pokemontcg.io/v2/sets/ (✅ 200 OK)
+⬇️ POST https://mysuper.api (✅ 200 OK)
 Headers: [
-	Content-Type : application/json
+    Content-Type : application/json
 ]
 Body: {
-	"response": {
-		"key": 1
-	}
+    "response": {
+        "key": 1
+    }
 }
 ```
 
