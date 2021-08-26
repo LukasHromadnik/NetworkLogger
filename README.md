@@ -9,7 +9,7 @@ URLSession.shared.dataTaskPublisher(for: url)
     .log()
 ```
 
-Then after the `Publisher` is subscriber the `log` method prints something like
+Then after the `Publisher` is subscribed the `log` method prints something like
 ```
 ⬆️ POST https://mysuper.api
 Headers: [
