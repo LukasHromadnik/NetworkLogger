@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Object responsible for formatting request, response, headers and body
 public struct Formatter {
     public let formatRequest: (URLRequest) -> String?
     public let formatResponse: (HTTPURLResponse, URLRequest) -> String?
@@ -15,6 +16,7 @@ public struct Formatter {
 }
 
 public extension Formatter {
+    /// Default implementation of the formatter that uses format from `Reqres` library
     static let `default` = Formatter(
         formatRequest: { request in
             "⬆️ " + request.urlDescription

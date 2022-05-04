@@ -9,6 +9,17 @@ import Combine
 import Foundation
 
 public extension URLSession.DataTaskPublisher {
+    /// Logs the network request and its response with the`formatter`
+    /// using `logger`.
+    ///
+    /// Internally this method add handler to `receiveSubscription` where it logs the request.
+    /// Then after some value is recieved from the server it logs the request's response.
+    ///
+    /// - Parameters:
+    ///     - logLevel: The severity of loging
+    ///     - formatter: `Formatter` that is used for the output
+    ///     - logger: Object responsible for printing the formatted output
+    /// - Returns: Publisher with the added logging functionality
     func log(
         logLevel: RequestLogLevel = .full,
         formatter: Formatter = .default,
